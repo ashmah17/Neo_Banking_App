@@ -4,7 +4,14 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        primaryRegular:['Regular'],
+        primaryBold:['Bold'],
+        primaryThin:['Thin'],
+
+      }
+    },
   },
   plugins: [],
 }
