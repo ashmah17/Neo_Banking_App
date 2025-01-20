@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
-// import angleleft from '../assets/angle-left.svg'
-import BackButton from './BackButton.jsx';
+ import BackButton from './BackButton.jsx';
 
 const AddMoney = () => {
   const [moneyAdded, setmoneyAdded] = useState(()=>{
     const savedMoney = localStorage.getItem('moneyAdded');
-    return savedMoney ? parseFloat(savedMoney) : 0
+    return savedMoney && !isNaN(parseFloat(savedMoney)) ? parseFloat(savedMoney) : 0;
   });
     const [inputMoney, setinputMoney] = useState('');
 

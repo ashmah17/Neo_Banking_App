@@ -150,7 +150,9 @@ const Dashboard = () => {
               <div className='bg-white rounded-2xl w-full pb-3 '>
                 <div className=' flex justify-between p-4'>
                   <h1 className='font-primaryBold'>Transactions</h1>
-                  <h3 className='font-primaryRegular cursor-pointer'>See all</h3>
+                  <Link to='/Transaction'>
+                    <h3 className='font-primaryRegular cursor-pointer'>See all</h3>
+                  </Link>
                 </div>
 
                 <div className=' ml-4 mr-4 justify-between items-center'>

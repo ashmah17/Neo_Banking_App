@@ -8,9 +8,18 @@ const Transaction = () => {
          {title: 'Starbucks', date: '12th December 2024', amount: '$24444', img:profile }, 
          {title: 'Amazon', date: '13th December 2024', amount: '$159', img:profile }, 
          {title: 'Netflix', date: '14th December 2024', amount: '$12.99', img:profile }, 
-         {title: 'Apple Store', date: '15th December 2024', amount: '$799', img:profile }
+         {title: 'Apple Store', date: '15th December 2024', amount: '$799', img:profile },
        ]
-  
+    const dropdownInfo = [
+      {month:'january'},{ month:'february'},{ month:'March'},{ month:'April'}, {month:'May'}, {month:'June'}, {month:'July'}, {month:'August'}, {month:'September'}, {month:'October'}, {month:'November'}, {month:'December'}
+
+       ]
+       
+       const [dropdown, setdropdown] = useState(false)
+       const  handledropDown=()=>{
+         setdropdown(true)
+       }
+
   return (
     <>
      <div className='flex flex-col'>
@@ -20,10 +29,18 @@ const Transaction = () => {
         </div>
 
         <div className='flex justify-between md:justify-center '>
-          <div className='cursor-pointer flex pl-4 justify-center rounded-full p-1 bg-white m-2'>
-            <h3>Period</h3>
-            <img src={angleDown} className='w-[1.3rem] ml-2' />
-          </div>
+         <button className="">
+          <img src={angleDown} className='w-[1.3rem] ml-2' onClick={handledropDown}/>
+          {dropdown && (
+              <div>
+                {dropdownInfo.map((trans)=>(
+                  <h1>{trans.month}</h1>
+                ))}
+              </div>
+          )}
+         </button>
+
+          
           <div className='cursor-pointer flex  pl-4 justify-center rounded-full p-1 bg-white m-2'>
             <h3>Debit Card</h3>
             <img src={angleDown} className='w-[1.3rem] ml-2' />

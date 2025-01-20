@@ -12,6 +12,7 @@ import NewCard from './Components/NewCard.jsx';
 import Replacement from './Components/Replacement.jsx';
 import Setting from './Components/Setting.jsx';
 import Transfer from './Components/Transfer.jsx';
+import Profile from './Components/Profile.jsx';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='/Replacement' element={<Replacement/>} />
           <Route path='/Setting' element={<Setting/>} />
           <Route path='/Transfer' element={<Transfer/>} />
+          <Route path='/Profile' element={<Profile/>} />
         </Routes>
       </BrowserRouter>}
 
