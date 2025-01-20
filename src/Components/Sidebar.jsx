@@ -10,7 +10,7 @@ const Sidebar = ({ Hover, setHover }) => {
   return (
    
     <div 
-    className={` ${Hover? 'md:w-[12rem] md:shadow-xl':' md:shadow-xl md:w-[5rem]'} shad transition-all duration-300 md:flex-col flex justify-between overflow-hidden  p-3 w-full  bg-white h-[5rem] bottom-0 absolute md:rounded md:m-2 rounded-tr-[3rem] rounded-tl-[3rem] md:left-0 md:h-[97vh]`}
+    className={` ${Hover? 'md:w-[12rem] md:shadow':' md:shadow md:w-[5rem]'} shad transition-all duration-300 md:flex-col flex justify-between overflow-hidden  p-3 w-full  bg-white h-[5rem] bottom-0 absolute md:rounded md:m-2 rounded-tr-[3rem] rounded-tl-[3rem] md:left-0 md:h-[97vh]`}
       onMouseEnter={()=> setHover(true)}
       onMouseLeave={()=> setHover(false)}
     >

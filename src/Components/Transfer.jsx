@@ -68,10 +68,13 @@ const Transfer = () => {
             <h1 className="text-center text-3xl m-4 font-primaryBold">${inputChange}</h1>
             <p className="flex justify-center text-gray-500">Available Balance<h1 className='text-center font-primaryBold text-gray-500 pl-2'>${AddMoney}</h1>
             </p>
-            <input onChange={handleInputChange} name='amount' className="m-4 bg-white outline-gray-400 p-2 rounded-xl"  placeholder='Amount' required/>
-            <input onChange={handleInputChange} name="number" className="m-4 bg-white outline-gray-400 p-2 rounded-xl"  placeholder='Account Number' required/>
-            <input onChange={handleInputChange} name="bank" className="m-4 bg-white outline-gray-400 p-2 rounded-xl"  placeholder='Bank Name'/>
-            <input onChange={handleInputChange} name="note" className="m-4 bg-white outline-gray-400 p-2 rounded-xl"  placeholder='Transfered for?' required/>
+            <div className=' grid md:grid-cols-2'>
+                <input onChange={handleInputChange} name='amount' className="m-4 bg-white outline-gray-400 p-2 rounded-xl"  placeholder='Amount' required/>
+                <input onChange={handleInputChange} name="number" className="m-4 bg-white outline-gray-400 p-2 rounded-xl"  placeholder='Account Number' required/>
+                <input onChange={handleInputChange} name="bank" className="m-4 bg-white outline-gray-400 p-2 rounded-xl"  placeholder='Bank Name'/>
+                <input onChange={handleInputChange} name="note" className="m-4 bg-white outline-gray-400 p-2 rounded-xl"  placeholder='Transfered for?' required/>
+                
+            </div>
             <button onClick={handleClick} className="greenB m-4 rounded-xl p-2 text-[1.2rem] font-primaryRegular text-white ">Submit </button>
           </div>
 
@@ -86,7 +89,7 @@ const Transfer = () => {
                 <h1 className='m-2'>{time} </h1>
               </div>
 
-              <div>
+              <div className=' pl-8 pr-8'>
                   <div className='flex p-4 justify-between'>
                   <h1 className="text-gray-400 font-primaryRegular text-xl">Status</h1>
                   <h1 className="text-gray-600 font-primaryBold flex text-xl">Completed</h1>

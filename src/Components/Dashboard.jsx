@@ -80,8 +80,8 @@ const Dashboard = () => {
               <div className='bg-white w-full rounded-xl p-4 h-[26%]'>
                   <h3 className='p-2 text-gray-400 font-primaryRegular'>Your Balance</h3>
                   <div className=' h-[4.5rem] pr-2 flex justify-between'>
-                    <h1 className={`${eyeOpen? 'pl-3':'text-3xl md:text-5xl font-primaryBold pl-3'}`}>
-                      {eyeOpen ? <h1 className='text-4xl font-primaryBold'>......</h1> : <h1>${balance}</h1>}
+                    <h1 className={`${eyeOpen? 'pl-3':'text-2xl md:text-5xl font-primaryBold pl-3'}`}>
+                      {eyeOpen ? <h1 className='text-2xl font-primaryBold'>......</h1> : <h1 className='text-3xl'>${balance}</h1>}
                     </h1>
                    <button >
                     { eyeOpen? <img className='cursor-pointer w-[1.5rem]' onClick={handleOpen} src={eyeSlash}/> : <img onClick={handleOpen} className='cursor-pointer w-[1.5rem]' src={eye}/>}
@@ -124,7 +124,7 @@ const Dashboard = () => {
                         </div>
                   </div>
 
-                  <div className='shadowinsett bg-gray-900 w-[20rem] flex flex-col lg:w-[30rem] justify-between flex flex-cols p-4 rounded-3xl lg:bg-red-200 md:w-[25rem] h-[13rem] m-2 '>
+                  <div className='shadowinsett bg-gray-900 w-[20rem] flex flex-col lg:w-[30rem] justify-between flex flex-cols p-4 rounded-3xl lg:bg-gray-900 md:w-[25rem] h-[13rem] m-2 '>
                         <div className='flex justify-between'>
                           <h1 className='text-gray-200 font-primaryRegular text-xl'>N.</h1>
                           <img src={mastercard} className='w-10' />
