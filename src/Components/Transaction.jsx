@@ -17,7 +17,11 @@ const Transaction = () => {
        
        const [dropdown, setdropdown] = useState(false)
        const  handledropDown=()=>{
-         setdropdown(true)
+         setdropdown(!dropdown)
+       }
+       const [dropdown2, setdropdown2] = useState(false)
+       const  handledropDown2=()=>{
+         setdropdown2(!dropdown2)
        }
 
   return (
@@ -29,27 +33,48 @@ const Transaction = () => {
         </div>
 
         <div className='flex justify-between md:justify-center '>
-         <button className="">
-          <img src={angleDown} className='w-[1.3rem] ml-2' onClick={handledropDown}/>
-          {dropdown && (
-              <div>
-                {dropdownInfo.map((trans)=>(
-                  <h1>{trans.month}</h1>
-                ))}
-              </div>
-          )}
-         </button>
+         <div>
+          <button className="bg-white flex outline-none p-2 shadow m-2 w-[6rem] justify-between rounded">
+            Period
+            <img src={angleDown} className='w-[1.3rem] ml-2' onClick={handledropDown}/>
+          </button>
 
+            <div className='bg-white shadow-2xl absolute ml-3 rounded p-2'>
+            {dropdown && (
+              <div>
+                  {dropdownInfo.map((trans)=>(
+                    <h1 className='p-1 hover:bg-gray-200 cursor-pointer transition-all duration-300'>{trans.month}</h1>
+                  ))}
+                </div>
+            )}
           
-          <div className='cursor-pointer flex  pl-4 justify-center rounded-full p-1 bg-white m-2'>
-            <h3>Debit Card</h3>
-            <img src={angleDown} className='w-[1.3rem] ml-2' />
+            </div>
+         </div>
+            
+         <div className='cursor-pointer flex pl-4 justify-center rounded p-1 bg-white m-2'>
+            <h3>Debit ....354546</h3>
+           
           </div>
-          <div className='cursor-pointer flex pl-4 justify-center rounded-full p-1 bg-white m-2'>
-            <h3>Sum</h3>
-            <img src={angleDown} className='w-[1.3rem] ml-2' />
-          </div>
+  
+         <div>
+          <button className="bg-white flex outline-none p-2 shadow m-2 w-[6rem] justify-between rounded">
+            Period
+            <img src={angleDown} className='w-[1.3rem] ml-2' onClick={handledropDown2}/>
+          </button>
+
+            <div className='bg-white shadow-2xl absolute ml-3 rounded p-2'>
+            {dropdown2 && (
+              <div>
+                  {dropdownInfo.map((trans)=>(
+                    <h1 className='p-1 hover:bg-gray-200 cursor-pointer transition-all duration-300'>{trans.month}</h1>
+                  ))}
+                </div>
+            )}
           
+            </div>
+         </div>
+
+
         </div>
 
         <div className='m-6 rounded-2xl p-2 bg-white'>
