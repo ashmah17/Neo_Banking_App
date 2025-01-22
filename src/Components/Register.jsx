@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import angleLeftIcon from '../Assets/angle-left.svg';
-import angleRight from '../Assets/angle-right.svg';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import {Link} from "react-router-dom"
 
 
@@ -66,12 +65,18 @@ const Register = () => {
         </div>
 
           <div className='flex-col flex justify-center items-center'>
-            <div className='flex'>
-              <img src={angleLeftIcon} className='w-[2rem] cursor-pointer' onClick={handleBack} />
+             <button onClick={handleBack} >
+                <ChevronLeft size={17} />
+              </button>
                 <span className={`${Next? ' bg-gray-300 ':'greenB'} w-[.5rem] h-[.5rem] rounded-full  m-2  ${Back ? '': ''}`}></span>
                 <span className={`${Next ? ' greenB ':'bg-gray-300'} w-[.5rem] h-[.5rem]  rounded-full  m-2 `}></span>
-              <img src={angleRight} className='w-[2rem] cursor-pointer' onClick={handleNext}/>  
-          </div>
+                <button onClick={handleNext} >
+                <ChevronRight size={17} />
+              </button>
+
+
+        
+
           </div>
       </div>
     </div>

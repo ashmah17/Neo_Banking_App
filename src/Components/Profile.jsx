@@ -13,11 +13,11 @@ const Profile = () => {
   return (
     <div className='flex flex-col justify-center w-full'>
       <BackButton/>
-      <div className='h-[15rem] relative  w-full flex flex-col justify-center items-center m-3'>
+      <div className='h-[15rem] relative flex flex-col justify-center items-center m-3'>
         <h1 className='p-1 m-2 text-center text-2xl font-primaryBold text-gray-600'>Profile</h1>
-        <div className=' flex justify-center'>
+        <div className=' flex justify-center relative'>
           <img src={aysha} className='w-[10rem] h-[10rem] rounded-full border border-white border-[.4rem] shadow-xl ' /> 
-          <img src={edit} className='w-[2rem] bg-white rounded-xl absolute right-[10rem] p-1 bottom-7 cursor-pointer'/> 
+          <img src={edit} className='w-[2rem] bg-white rounded-xl absolute right-[1rem] p-1 bottom-0 cursor-pointer'/> 
         </div>
       </div>
       <div className="rounded bg-white p-4 m-5 rounded-xl shadow">
