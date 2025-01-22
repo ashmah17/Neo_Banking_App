@@ -64,8 +64,8 @@ const Register = () => {
             </button>
         </div>
 
-          <div className='flex-col flex justify-center items-center'>
-             <button onClick={handleBack} >
+          <div className=' flex justify-center items-center'>
+             <button onClick={handleBack}  >
                 <ChevronLeft size={17} />
               </button>
                 <span className={`${Next? ' bg-gray-300 ':'greenB'} w-[.5rem] h-[.5rem] rounded-full  m-2  ${Back ? '': ''}`}></span>
