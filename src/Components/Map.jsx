@@ -21,7 +21,7 @@ const Map = ({ DarkMood }) => {
             </iframe>
           </div>
         </div>
-        <div className={`${hover ? 'md:ml-[14rem] md:pr-3' : ' ml-3 md:ml-[7rem] md:pr-3'} transition-all duration-300 ${DarkMood ? 'bg-white' : 'text-gray-300 p-4 bg-gray-900 mapshadow border border-gray-700'} h-[45vh]  sticky z-30 bottom-[1px] rounded-tr-[2rem] rounded-tl-[2rem]`}>
+        <div className={`${hover ? 'md:ml-[14rem] md:pr-3' : ' ml-3 md:ml-[7rem] md:pr-3'} transition-all duration-300 ${DarkMood ? 'bg-white' : 'text-gray-300 p-4 bg-gray-900 mapshadow border border-gray-700'} pb-5 h-[50vh] md:h-[45vh]  sticky z-30 bottom-[1px] rounded-tr-[2rem] rounded-tl-[2rem]`}>
           <div className='flex justify-between p-2'>
             <h1 className='text-3xl font-primaryBold'>Central Market Katsina</h1>
             <button>Cash back</button>
