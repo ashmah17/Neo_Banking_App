@@ -74,7 +74,8 @@ const Dashboard = ({DarkMood, handleMood}) => {
                     </div>
                   </Link>
                   <button className="">
-                    {DarkMood ? <img src={night} className='w-[1.8rem] cursor-pointer' onClick={handleMood} /> :                       <img src={sun} className='w-[1.8rem] cursor-pointer' onClick={handleMood} />
+                    {DarkMood ? <img src={night} className='w-[1.8rem] cursor-pointer' onClick={handleMood} /> :                       
+                    <img src={sun} className='w-[1.8rem] cursor-pointer' onClick={handleMood} />
 }
                   </button>
                 </div>

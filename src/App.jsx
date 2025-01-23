@@ -13,7 +13,7 @@ import Replacement from './Components/Replacement.jsx';
 import Setting from './Components/Setting.jsx';
 import Transfer from './Components/Transfer.jsx';
 import Profile from './Components/Profile.jsx';
-import { use } from 'react';
+import Map from './Components/Map.jsx';
 
 
 function App() {
@@ -33,6 +33,7 @@ const handleMood =()=>{
 
 
  
+  const [Hover, setHover] = useState(false); 
 
 
   return (
@@ -51,6 +52,7 @@ const handleMood =()=>{
           <Route path='/Setting' element={<Setting DarkMood={DarkMood}/>} />
           <Route path='/Transfer' element={<Transfer DarkMood={DarkMood}/>} />
           <Route path='/Profile' element={<Profile DarkMood={DarkMood}/>} />
+          <Route path='/Map' element={<Map DarkMood={DarkMood}  />} />
         </Routes>
       </BrowserRouter>}
 

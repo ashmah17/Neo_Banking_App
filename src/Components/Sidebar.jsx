@@ -16,11 +16,10 @@ const Sidebar = ({ Hover, setHover, DarkMood }) => {
     {title: 'Setting', img:setting, path:'/Setting'},
     {title: 'Profile', img:profile, path:'/Profile'}
   ]
-  console.log(DarkMood, 'is')
   return (
    
     <div 
-    className={`${DarkMood ? 'bg-white shadowD': 'bg-gray-900 border border-gray-700 shadowD'} ${Hover? 'md:w-[12rem] md:shadow':' md:shadow md:w-[5rem]'}   transition-all duration-300 md:flex-col flex justify-between overflow-hidden  p-3 w-full   h-[5rem]  md:rounded md:m-2 rounded-tr-[3rem] rounded-tl-[3rem] md:left-0 md:h-[97vh] fixed bottom-0`}
+    className={`${DarkMood ? 'bg-white shadowD': 'bg-gray-900 border border-gray-700 shadowD'} ${Hover? 'md:w-[12rem] md:shadow':' md:shadow md:w-[5rem]'} z-40  transition-all duration-300 md:flex-col flex justify-between overflow-hidden  p-3 w-full   h-[5rem]  md:rounded md:m-2 rounded-tr-[3rem] rounded-tl-[3rem] md:left-0 md:h-[97vh] fixed bottom-0`}
       onMouseEnter={()=> setHover(true)}
       onMouseLeave={()=> setHover(false)}
     >
