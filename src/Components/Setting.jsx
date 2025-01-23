@@ -10,7 +10,7 @@ import BackButton from './BackButton'
 
 
 
-const Setting = () => {
+const Setting = ({DarkMood}) => {
 
   const settings =[
     {title:'View Pin', img:eye},
@@ -21,25 +21,42 @@ const Setting = () => {
 
   const [notify, setnotify] = useState(false);
   const handleNotification =()=>{
-    setnotify(true);
+    setnotify(!notify);
   }
   return (
-    <div className={`p-2`}>
+    <div className={` ${DarkMood ? '': 'bg-gray-900 text-white'} h-[100vh] p-2`}>
       <BackButton/>
 
         <h1 className='p-2 text-center text-2xl font-primaryBold'>Setting</h1>
         <h1 className='p-3 mt-6 text-left text-2xl font-primaryBold'>Card Setting</h1>
         <div className=" m-2  p-3">
-          <div className='bg-white rounded-2xl p-4 flex justify-between m-2'>
+          <div className={` ${DarkMood ? 'bg-white':' shadowD border border-gray-700 bg-gray-900'}   rounded-2xl p-4 flex justify-between m-2`}>
             <div className='flex'><img src={lock} className='mr-4 w-[1.5rem]' />Allow Transactions</div>
-               <div className={` ${notify ? 'greenB': 'bg-gray-300'} w-[3.5rem] h-[2rem] rounded-full p-[.2rem] relative `}>
-                  <div className={notify ? ' absolute right-[.2rem] w-[1.6rem] bg-white h-[1.6rem] rounded-full cursor-pointer': ' w-[1.6rem] bg-white h-[1.6rem] rounded-full cursor-pointer'} onClick={handleNotification}></div>
-               </div>
+             
+             
+             <button  onClick={handleNotification}>
+              {notify ?
+               <div className={`  greenB  w-[3.5rem] h-[2rem] rounded-full p-[.2rem] relative `}>
+                  <div className={notify ? ' absolute right-[.2rem] w-[1.6rem] bg-white h-[1.6rem] rounded-full cursor-pointer': ' w-[1.6rem] bg-white h-[1.6rem] rounded-full cursor-pointer'}></div>
+               </div> : 
+               <div className={` bg-gray-300 w-[3.5rem] h-[2rem] rounded-full p-[.2rem] relative `}>
+                  <div className={notify ? ' absolute left-[.2rem] w-[1.6rem] bg-white h-[1.6rem] rounded-full cursor-pointer': ' w-[1.6rem] bg-white h-[1.6rem] rounded-full cursor-pointer'}></div>
+               </div> 
+
+               
+              
+            }
+             </button>
+
+
+
           </div>
+
+
 
          <div>
            {settings.map((set)=>(
-         <div className='bg-white rounded-2xl p-5 flex justify-between m-2 mt-4'>
+         <div className={` ${DarkMood ? 'bg-white':' shadowD border border-gray-700 bg-gray-900'} rounded-2xl p-5 flex justify-between m-2 mt-4`}>
             <div>
                <div className='flex'><img src={set.img} className='mr-4 w-[1.5rem]' />{set.title}</div>
             </div>

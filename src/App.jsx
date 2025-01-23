@@ -13,15 +13,25 @@ import Replacement from './Components/Replacement.jsx';
 import Setting from './Components/Setting.jsx';
 import Transfer from './Components/Transfer.jsx';
 import Profile from './Components/Profile.jsx';
+import { use } from 'react';
 
 
 function App() {
 
-  const [DarkMood, setDarkMood] = useState(true);
+  const [DarkMood, setDarkMood] = useState(()=>{
+    const savedMood = localStorage.getItem('theme');
+    return savedMood ? JSON.parse(savedMood) : true;
+  })
   
-  const handleMood =()=>{
-    setDarkMood(!DarkMood)
-  }
+const handleMood =()=>{
+  setDarkMood((prevMood)=>{
+    const newMood = (!prevMood);
+    localStorage.setItem('theme', JSON.stringify(newMood))
+    return newMood
+  })
+}
+
+
  
 
 

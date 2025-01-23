@@ -40,11 +40,7 @@ const Dashboard = ({DarkMood, handleMood}) => {
     const handleOpen = ()=>{
         seteyeOpen(!eyeOpen)
       }
-      // const [DarkMood, setDarkMood] = useState(true);
-  
-      // const handleMood =()=>{
-      //   setDarkMood(!DarkMood)
-      // }
+      
      
 
 
