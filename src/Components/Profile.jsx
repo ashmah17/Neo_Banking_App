@@ -6,21 +6,20 @@ import phone from '../assets/phone.svg'
 import email from '../assets/email.svg'
 import home from '../assets/home.svg'
 import BackButton from './BackButton'
-
-const Profile = () => {
+const Profile = ({DarkMood}) => {
    
 
   return (
-    <div className='flex flex-col justify-center w-full'>
-      <BackButton/>
+    <div className={`${DarkMood ? '': 'bg-gray-900'} flex flex-col justify-center w-full`}>
       <div className='h-[15rem] relative flex flex-col justify-center items-center m-3'>
+      <BackButton/>
         <h1 className='p-1 m-2 text-center text-2xl font-primaryBold text-gray-600'>Profile</h1>
         <div className=' flex justify-center relative'>
-          <img src={aysha} className='w-[10rem] h-[10rem] rounded-full border border-white border-[.4rem] shadow-xl ' /> 
-          <img src={edit} className='w-[2rem] bg-white rounded-xl absolute right-[1rem] p-1 bottom-0 cursor-pointer'/> 
+          <img src={aysha} className={`${DarkMood ? 'border-white': ' border-gray-800 shadowD' } w-[10rem] h-[10rem] rounded-full border  border-[.4rem] shadow-xl `} /> 
+          <img src={edit} className={` ${DarkMood ? 'bg-white': 'bg-gray-800 shadowD border border border-gray-700'} w-[2rem] rounded-xl absolute right-[1rem] p-1 bottom-0 cursor-pointer`}/> 
         </div>
       </div>
-      <div className="rounded bg-white p-4 m-5 rounded-xl shadow">
+      <div className={` ${DarkMood ? 'bg-white': ' border border-gray-700 text-gray-300 shadowD bg-gray-900'} rounded p-4 m-5 rounded-xl shadow`}>
           <div className='flex justify-between '>
             <h1 className="font-primaryBold text-xl"> Personal Info</h1>
             <h3 className="font-primaryBold cursor-pointer">Edit</h3>
@@ -56,7 +55,7 @@ const Profile = () => {
             </div>
           </div>
       </div>
-      <div className="rounded bg-white  p-4 m-5 rounded-xl shadow">
+      <div className={` ${DarkMood ? 'bg-white': 'text-gray-300 border border-gray-700 shadowD bg-gray-900'} rounded p-4 m-5 rounded-xl shadow`}>
           <div className='flex justify-between '>
             <h1 className="font-primaryBold text-xl">Account Info</h1>
             <h3 className="font-primaryBold cursor-pointer">Edit</h3>

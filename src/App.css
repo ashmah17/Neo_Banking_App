@@ -10,17 +10,28 @@ body{
 .backG{
   background-color: rgb(239, 239, 239);
 }
+.backM{
+  background-color: rgb(6, 20, 35);
+}
 .greenB{
-  background-color: rgb(146, 224, 58);
+  background-color: rgb(188, 224, 58);
 }
 
 .shadowinset{
   box-shadow: inset 2px 1px 4cqw  #58990d;
-
+}
+.shadowinsety{
+  box-shadow: inset 2px 1px 4cqw  #333630;
 }
 .shadowinsett{
   box-shadow: inset 2px 1px 4cqw  #c1c1c1;
 }
 .shad{
   box-shadow: .2rem  9px 18px rgba(233, 233, 233, 0.5);
+}
+.shadowD{
+  box-shadow: .2rem  2px 18px  rgba(0, 0, 0, 0.36)
+}
+.sidebarShadow{
+  box-shadow: .2rem  9px 22px  rgba(13, 56, 82, 0.79)
 }

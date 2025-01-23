@@ -3,7 +3,7 @@ import BackButton from './BackButton'
 import money from '../assets/money.svg'
 
 
-const Transfer = () => {
+const Transfer = ({DarkMood}) => {
   const [time, settime]= useState('');
   const [date, setdate]= useState('');
   const [day, setday]= useState('');
@@ -50,15 +50,14 @@ const Transfer = () => {
     localStorage.setItem('moneyAdded', Amount)
     alert(`${inputChange} 'Successfully Transfered`);
       setreceipt(true)
-      
   }
 
 
   return (
-    <div>
+    <div className={DarkMood ? 'h-[100%]': 'bg-gray-900 h-[100%]'}>
        <div className='p-4 flex justify-center'>
         <BackButton/>
-        <h1 className='text-2xl font-primaryBold'>Details</h1>
+        <h1 className={DarkMood ? 'bg-red-900' : 'text-white text-2xl font-primaryBold'}>Details</h1>
     </div>
        <div className='flex justify-center p-10'>
        <img src={money} className='w-[9rem]'/>
@@ -66,13 +65,13 @@ const Transfer = () => {
 
           <div className={receipt ? 'hidden' :'flex justify-center flex-col font-primaryRegular'}>
             <h1 className="text-center text-3xl m-4 font-primaryBold">${inputChange}</h1>
-            <p className="flex justify-center text-gray-500">Available Balance<h1 className='text-center font-primaryBold text-gray-500 pl-2'>${AddMoney}</h1>
+            <p className={` ${DarkMood ? '':'text-white'} flex justify-center text-gray-500`}>Available Balance<h1 className={`${DarkMood ? '': 'text-white'} text-center font-primaryBold text-gray-500 pl-2`}>${AddMoney}</h1>
             </p>
-            <div className=' grid md:grid-cols-2'>
-                <input onChange={handleInputChange} name='amount' className="m-4 bg-white outline-gray-400 p-2 rounded-xl"  placeholder='Amount' required/>
-                <input onChange={handleInputChange} name="number" className="m-4 bg-white outline-gray-400 p-2 rounded-xl"  placeholder='Account Number' required/>
-                <input onChange={handleInputChange} name="bank" className="m-4 bg-white outline-gray-400 p-2 rounded-xl"  placeholder='Bank Name'/>
-                <input onChange={handleInputChange} name="note" className="m-4 bg-white outline-gray-400 p-2 rounded-xl"  placeholder='Transfered for?' required/>
+            <div className=' grid md:grid-cols-2 m'>
+                <input onChange={handleInputChange} name='amount' className={`${DarkMood? '': 'bg-gray-800'} m-4  outline-gray-400 p-2 rounded-xl`}  placeholder='Amount' required/>
+                <input onChange={handleInputChange} name="number" className={`${DarkMood? '': 'bg-gray-800'} m-4  outline-gray-400 p-2 rounded-xl`}   placeholder='Account Number' required/>
+                <input onChange={handleInputChange} name="bank" className={`${DarkMood? '': 'bg-gray-800'} m-4  outline-gray-400 p-2 rounded-xl`}   placeholder='Bank Name'/>
+                <input onChange={handleInputChange} name="note" className={`${DarkMood? '': 'bg-gray-800'} m-4  outline-gray-400 p-2 rounded-xl`}   placeholder='Transfered for?' required/>
                 
             </div>
             <button onClick={handleClick} className="greenB m-4 rounded-xl p-2 text-[1.2rem] font-primaryRegular text-white ">Submit </button>
@@ -81,34 +80,34 @@ const Transfer = () => {
 
         
               <div className={receipt ? '' : 'hidden'}>
-              <h1 className="text-center p-2 text-4xl font-primaryBold">${inputChange}</h1>
-              <p className="text-center p-2 text-xl font-primaryRegular text-gray-500">Transfer to {inputBank}</p>
+              <h1 className={`${DarkMood ? '': 'text-white'} text-center p-2 text-4xl font-primaryBold`}>${inputChange}</h1>
+              <p className={ `${DarkMood ?  '': 'text-white'} text-center p-2 text-xl font-primaryRegular text-gray-500`}>Transfer to {inputBank}</p>
               <div className='flex justify-center p-3 text-xl font-primaryRegular text-gray-500'>
-                <h1 className='m-2'>{day} </h1>
-                <h1 className='m-2'>{date} </h1>
-                <h1 className='m-2'>{time} </h1>
+                <h1 className={`${DarkMood ? '': 'text-white'} m-2`}>{day} </h1>
+                <h1 className={`${DarkMood ? '': 'text-white'} m-2`}>{date} </h1>
+                <h1 className={`${DarkMood ? '': 'text-white'} m-2`}>{time} </h1>
               </div>
 
               <div className=' pl-8 pr-8'>
-                  <div className='flex p-4 justify-between'>
-                  <h1 className="text-gray-400 font-primaryRegular text-xl">Status</h1>
-                  <h1 className="text-gray-600 font-primaryBold flex text-xl">Completed</h1>
+                  <div className={` ${DarkMood ? '':'text-white'} flex p-4 justify-between`}>
+                  <h1 className={`${DarkMood ? '':'text-white'} text-gray-400 font-primaryRegular text-xl`} >Status</h1>
+                  <h1 className={`${DarkMood ? '' : 'text-white'} text-gray-600 font-primaryBold flex text-xl`}>Completed</h1>
                 </div>
-                  <div className='flex p-4 justify-between'>
-                  <h1 className="text-gray-400 font-primaryRegular text-xl">Routing Number</h1>
+                  <div className={` ${DarkMood ? '':'text-white'} flex p-4 justify-between`}>
+                  <h1 className={`${DarkMood ? '':'text-white'} text-gray-400 font-primaryRegular text-xl`} >Routing Number</h1>
                   <h1 className="text-gray-600 font-primaryBold flex text-xl">657597869757</h1>
                 </div>
-                  <div className='flex p-4 justify-between'>
-                  <h1 className="text-gray-400 font-primaryRegular text-xl">Account Number</h1>
+                  <div className={` ${DarkMood ? '':'text-white'} flex p-4 justify-between`}>
+                  <h1 className={`${DarkMood ? '':'text-white'} text-gray-400 font-primaryRegular text-xl`} >Account Number</h1>
                   <h1 className="text-gray-600 font-primaryBold flex text-xl">{inputNumber}</h1>
                 </div>
-                  <div className='flex p-4 justify-between'>
-                  <h1 className="text-gray-400 font-primaryRegular text-xl">Bank Name</h1>
+                  <div className={` ${DarkMood ? '':'text-white'} flex p-4 justify-between`}>
+                  <h1 className={`${DarkMood ? '':'text-white'} text-gray-400 font-primaryRegular text-xl`} >Bank Name</h1>
                   <h1 className="text-gray-600 font-primaryBold flex text-xl">{inputBank}</h1>
                 </div>
                  
-                  <div className='flex p-4 justify-between'>
-                  <h1 className="text-gray-400 font-primaryRegular text-xl">Note</h1>
+                  <div className={` ${DarkMood ? '':'text-white'} flex p-4 justify-between`}>
+                  <h1 className={`${DarkMood ? '':'text-white'} text-gray-400 font-primaryRegular text-xl`} >Note</h1>
                   <h1 className="text-gray-600 font-primaryBold flex text-xl">{inputNote}</h1>
                 </div>
               </div>

@@ -3,7 +3,7 @@ import BackButton from './BackButton';
 import angleDown from '../assets/angle-down.svg';
 import profile from '../assets/profile.svg';
 
-const Transaction = () => {
+const Transaction = ({DarkMood}) => {
   const transactions = [
          {title: 'Starbucks', date: '12th December 2024', amount: '$24444', img:profile }, 
          {title: 'Amazon', date: '13th December 2024', amount: '$159', img:profile }, 
@@ -26,20 +26,20 @@ const Transaction = () => {
 
   return (
     <>
-     <div className='flex flex-col'>
+     <div className={DarkMood ? '':'h-[100%] bg-gray-900'}>
         <div className='p-8 flex justify-center'>
             <BackButton/>
-            <h1 className='text-2xl font-primaryBold'>Transactions</h1>
+            <h1 className={` ${DarkMood ? '': 'text-white'} text-2xl font-primaryBold`}>Transactions</h1>
         </div>
 
         <div className='flex justify-between md:justify-center '>
          <div>
-          <button className="bg-white flex outline-none p-2 shadow m-2 w-[6rem] justify-between rounded">
+          <button className={`${DarkMood ? 'bg-white':'border border-gray-700 bg-gray-900 text-gray-300 shadowD'}  flex outline-none p-2 shadow m-2 w-[6rem] justify-between rounded`}>
             Period
             <img src={angleDown} className='w-[1.3rem] ml-2' onClick={handledropDown}/>
           </button>
 
-            <div className='bg-white shadow-2xl absolute ml-3 rounded p-2'>
+            <div className={`${DarkMood ? 'text-gray-300 shadow-2xl bg-white':' bg-gray-900 shadowD hoover:bg-gray-800 '} text-gray-300 shadow-2xl absolute ml-3 rounded p-2`}>
             {dropdown && (
               <div>
                   {dropdownInfo.map((trans)=>(
@@ -51,19 +51,19 @@ const Transaction = () => {
             </div>
          </div>
             
-         <div className='cursor-pointer flex pl-4 justify-center rounded p-1 bg-white m-2'>
+         <div className={`${DarkMood ? 'bg-white': 'border border-gray-700 bg-gray-900 text-gray-300 shadowD p-2'} cursor-pointer flex pl-4 justify-center rounded p-1  m-2`}>
             <h3>Debit ....354546</h3>
            
           </div>
   
          <div>
-          <button className="bg-white flex outline-none p-2 shadow m-2 w-[6rem] justify-between rounded">
+          <button className={`${DarkMood ? 'bg-white': 'border border-gray-700 bg-gray-900 text-gray-300 shadowD'} flex outline-none p-2 shadow m-2 w-[6rem] justify-between rounded`}>
             Period
             <img src={angleDown} className='w-[1.3rem] ml-2' onClick={handledropDown2}/>
           </button>
 
-            <div className='bg-white shadow-2xl absolute ml-3 rounded p-2'>
-            {dropdown2 && (
+          <div className={`${DarkMood ? 'text-gray-300 shadow-2xl bg-white':'bg-gray-900 shadowD hoover:bg-gray-800 '} text-gray-300 shadow-2xl absolute ml-3 rounded p-2`}>
+          {dropdown2 && (
               <div>
                   {dropdownInfo.map((trans)=>(
                     <h1 className='p-1 hover:bg-gray-200 cursor-pointer transition-all duration-300'>{trans.month}</h1>
@@ -77,7 +77,7 @@ const Transaction = () => {
 
         </div>
 
-        <div className='m-6 rounded-2xl p-2 bg-white'>
+        <div className={`${DarkMood ? 'bg-white':'border border-gray-700 bg-gray-900 text-gray-300'} m-6 rounded-2xl p-2 `}>
             <span className='flex justify-between p-2 font-primaryRegular text-gray-400 '>
               <h4>Date</h4>
               <h4>Total</h4>
@@ -104,7 +104,7 @@ const Transaction = () => {
                           <h2 className='font-primaryRegular'> {transaction.amount}</h2>
                         </div>
                     </div>
-                    <div className=' h-[.1rem] bg-gray-200 m-6'></div>
+                    <div className={` ${DarkMood ? 'bg-gray-200': 'bg-gray-700'} h-[.1rem] m-6`}></div>
 
                     </>
                  ))}

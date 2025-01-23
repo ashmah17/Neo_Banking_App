@@ -16,22 +16,31 @@ import Profile from './Components/Profile.jsx';
 
 
 function App() {
+
+  const [DarkMood, setDarkMood] = useState(true);
+  
+  const handleMood =()=>{
+    setDarkMood(!DarkMood)
+  }
+ 
+
+
   return (
     <div className=''>
       {<BrowserRouter>
         <Routes>
           <Route path='/' element={<LandingPage/>}/>
-          <Route path='/Dashboard' element={<Dashboard/>}/>
-          <Route path='/Login' element={<Login/>}/>
-          <Route path='/Register' element={<Register/>}/>
-          <Route path='/Sidebar' element={<Sidebar/>}/>
-          <Route path='/Transaction' element={<Transaction/>} />
-          <Route path='/AddMoney' element={<AddMoney/>} />
-          <Route path='/NewCard' element={<NewCard/>} />
-          <Route path='/Replacement' element={<Replacement/>} />
-          <Route path='/Setting' element={<Setting/>} />
-          <Route path='/Transfer' element={<Transfer/>} />
-          <Route path='/Profile' element={<Profile/>} />
+          <Route path='/Dashboard' element={<Dashboard DarkMood={DarkMood} handleMood={handleMood} />}/>
+          <Route path='/Login' element={<Login DarkMood={DarkMood}/>}/>
+          <Route path='/Register' element={<Register DarkMood={DarkMood}/>}/>
+          <Route path='/Sidebar' element={<Sidebar DarkMood={DarkMood}/>}/>
+          <Route path='/Transaction' element={<Transaction DarkMood={DarkMood}/>} />
+          <Route path='/AddMoney' element={<AddMoney DarkMood={DarkMood}/>} />
+          <Route path='/NewCard' element={<NewCard DarkMood={DarkMood}/>} />
+          <Route path='/Replacement' element={<Replacement DarkMood={DarkMood}/>} />
+          <Route path='/Setting' element={<Setting DarkMood={DarkMood}/>} />
+          <Route path='/Transfer' element={<Transfer DarkMood={DarkMood}/>} />
+          <Route path='/Profile' element={<Profile DarkMood={DarkMood}/>} />
         </Routes>
       </BrowserRouter>}
 

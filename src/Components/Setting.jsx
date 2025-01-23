@@ -24,7 +24,7 @@ const Setting = () => {
     setnotify(true);
   }
   return (
-    <div className='p-2'>
+    <div className={`p-2`}>
       <BackButton/>
 
         <h1 className='p-2 text-center text-2xl font-primaryBold'>Setting</h1>
