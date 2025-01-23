@@ -54,7 +54,7 @@ const Transfer = ({DarkMood}) => {
 
 
   return (
-    <div className={DarkMood ? 'h-[100%]': 'bg-gray-900 h-[100%]'}>
+    <div className={DarkMood ? 'h-[100%]': ' bg-gray-900 h-[100vh]'}>
        <div className='p-4 flex justify-center'>
         <BackButton/>
         <h1 className={DarkMood ? 'bg-red-900' : 'text-white text-2xl font-primaryBold'}>Details</h1>

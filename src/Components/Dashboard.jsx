@@ -14,7 +14,7 @@ import levis from '../assets/levis.png'
 import Sidebar from './Sidebar'
 import { Link } from 'react-router-dom'
 
-const Dashboard = () => { 
+const Dashboard = ({DarkMood, handleMood}) => { 
   const [balance, setBalance] = useState(0); 
   useEffect(()=>{
     const savedMoney = localStorage.getItem('moneyAdded')
@@ -40,18 +40,13 @@ const Dashboard = () => {
     const handleOpen = ()=>{
         seteyeOpen(!eyeOpen)
       }
-      const [DarkMood, setDarkMood] = useState(true);
+      // const [DarkMood, setDarkMood] = useState(true);
   
-      const handleMood =()=>{
-        setDarkMood(!DarkMood)
-      }
+      // const handleMood =()=>{
+      //   setDarkMood(!DarkMood)
+      // }
      
 
-      // const images = [visa,visa,visa,visa]
-      // const [currentIndex, setCurrentIndex] = useState(0);
-      // const showImage =(index)=>{
-      //   setCurrentIndex(index)
-      // }
 
       const transactions = [
         {title: 'Starbucks', date: '12th December 2024', amount: '$24444', img:profile }, 
@@ -64,7 +59,7 @@ const Dashboard = () => {
       
   
   return ( 
-      <div className={`${DarkMood ? 'backG':'backM'} ' w-full mb-14 h-[100%] overflow-scroll'`}> 
+      <div className={`${DarkMood ? 'backG':'backM '} ' w-full pb-14 h-[100%] overflow-scroll'`}> 
           <Sidebar Hover={Hover} setHover={setHover} DarkMood={DarkMood}/>
 
           <div className={`${Hover ? 'md:ml-[14rem] md:pr-3' : 'ml-3 md:ml-[7rem] md:pr-3'} p-4 transition-all duration-300 flex-1   h-full`}>
@@ -116,7 +111,7 @@ const Dashboard = () => {
                     </Link>
                   </div>
 
-                <div className='   flex relative  lg:justify-between overflow-x-scroll' > 
+                <div className='h-[17rem]  flex relative  lg:justify-between overflow-x-scroll' > 
              
                   <div className='shadowinset greenB w-[100vw] flex flex-col lg:w-[30rem] justify-between p-4 rounded-3xl md:w-[25rem] h-[13rem] m-2 '>
                         <div className='flex justify-between'>
@@ -175,8 +170,6 @@ const Dashboard = () => {
                 </div>
 
               </div>
-
-
            
               <div className={`${DarkMood? 'bg-white': 'border border-gray-700 bg-gray-900 shadowD'}  rounded-2xl w-full pb-3 `}>
                 <div className=' flex justify-between p-4'>
@@ -213,17 +206,17 @@ const Dashboard = () => {
               
               <div className={`${DarkMood ? 'bg-white':'text-gray-300 border border-gray-700 bg-gray-900 shadowD'} rounded-2xl w-full h-[55%]  mt-4 p-4 `}>
                <div className='lg:flex lg:flex-cols-2'>
-               <div className='w-full flex justify-between p-2 m-3 rounded-xl shadow'>
+               <div className={`${DarkMood ? '' :'border border-gray-700'} w-full flex justify-between p-2 m-3 rounded-xl shadow`}>
                   <h2 className='text-2xl font-primaryBold'>Rewards</h2>
                   <h2 className='font-primaryBold mr-3'>See all</h2>
                 </div>
-                <div className='w-full flex justify-between p-2 m-3 rounded-xl shadow'>
+                <div className={`${DarkMood ? '' :'border border-gray-700'} w-full flex justify-between p-2 m-3 rounded-xl shadow`}>
                   <p className='font-primaryRegular'>Cashback due date 5</p>
                   <p className='font-primaryBold mr-3 '>+$5689</p>
                 </div>
                </div>
 
-                <div className='flex  overflow-x-scroll m-3 mt-8 '>
+                <div className='flex h-[11rem] overflow-x-scroll m-3 mt-8 '>
                   
                      {images.map((image,index)=>(
                          <div 
