@@ -5,7 +5,11 @@ import profile from '../assets/profile.svg'
 import phone from '../assets/phone.svg'
 import email from '../assets/email.svg'
 import home from '../assets/home.svg'
+import ArrowRight from '../assets/arrow-right.svg'
 import BackButton from './BackButton'
+import {Link} from 'react-router-dom'
+
+
 const Profile = ({DarkMood}) => {
    
 
@@ -53,6 +57,12 @@ const Profile = ({DarkMood}) => {
                 <h2 className="font-primaryRegular">70 maitama street</h2>
               </span>
             </div>
+            <Link to='/Login' className="flex m-2 shadow rounded p-1">
+              <img src={ArrowRight} className="w-[2rem] rotate-[180deg] cursor-pointer" />
+              <span className="ml-6">
+                <h4 className="font-primaryRegular">Log Out</h4>
+              </span>
+            </Link>
           </div>
       </div>
       <div className={` ${DarkMood ? 'bg-white': 'text-gray-300 border border-gray-700 shadowD bg-gray-900'} rounded p-4 m-5 rounded-xl shadow`}>

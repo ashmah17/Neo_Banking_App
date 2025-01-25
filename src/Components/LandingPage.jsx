@@ -21,12 +21,12 @@ const LandingPage = ({DarkMood}) => {
         <h3 className='text text-3xl'>Banking System</h3>
       </div>
 
-     <div className={`${Waiting ? 'hidden':' w-full h-[100vh] flex justify-center items-center '}  ${DarkMood ? 'bg-gray-900': 'backG'}`} >
-          <div className={`${DarkMood ? 'bg-gray-900 shadowD': 'bg-white'} w-[30rem] h-[20rem] rounded-xl shadow flex flex-col justify-center items-center`}>
-            <button className='greenB w-[25rem] p-2 m-4 h-[4rem] rounded-2xl text-white text-2xl shadow-xl hover:shadow transition-all duration-300 '>
+     <div className={` ${DarkMood ? '': 'backM'} ${Waiting ? 'hidden':' w-full h-[100vh] flex justify-center items-center '}  ${DarkMood ? 'bg-gray-900': 'backG'}`} >
+          <div className={`${DarkMood ? 'bg-white': 'bg-gray-900 shadowinset'} w-[80%] h-[20rem] rounded-xl shadow flex flex-col justify-center items-center`}>
+            <button className='greenB w-[80%] p-2 m-4 h-[4rem] rounded-2xl text-white text-2xl shadow-xl hover:shadow transition-all duration-300 '>
               <Link to='/Login' >Sign In</Link>
             </button>
-            <button className='greenB w-[25rem] p-2 m-4 h-[4rem] rounded-2xl text-white text-2xl shadow-xl hover:shadow transition-all duration-300 '>
+            <button className='greenB w-[80%] p-2 m-4 h-[4rem] rounded-2xl text-white text-2xl shadow-xl hover:shadow transition-all duration-300 '>
               <Link to='/Register'>Sign Up</Link>
             </button>
           </div>
