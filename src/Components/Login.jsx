@@ -6,7 +6,7 @@ const Login = ({DarkMood}) => {
 
   return (
     <div className={`${DarkMood ? '': 'backM'} w-full h-[100vh] flex justify-center items-center`}>
-         <div className={`${DarkMood ? '': 'shadowinset p-3 bg-gray-900'} w-[86%] h-[23rem] rounded-xl justify-center shadow flex flex-col`}>
+         <div className={`${DarkMood ? '': 'shadowinsety p-3 bg-gray-900'} w-[86%] h-[23rem] rounded-xl justify-center shadow flex flex-col`}>
             <div className='flex flex-col m-2 '>
               <label  className={` ${DarkMood ? 'text-gray-500': 'text-gray-300'} outline-green-400 ml-3 text-[1.2rem] font-PrimaryRegular `} >Email</label>
               <input type="text"  className={` ${DarkMood ? '': ' bg-gray-800'} g-gray-100 h-12 outline-green-400 cursor-pointer p-2 rounded-xl outline-green-400 m-2`}  />

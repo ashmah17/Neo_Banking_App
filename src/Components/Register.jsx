@@ -33,10 +33,10 @@ const Register = ({DarkMood}) => {
 
   return (
     <div className={`${DarkMood ? 'backG':'backM'}  w-full h-[100vh] flex justify-center items-center`}>
-      <div className={` ${DarkMood ? 'bg-white': 'bg-gray-900 shadowinset'}  p-3 w-[86%] max-w-md md:max-w-2xl lg:max-w-4xl h-auto rounded-xl flex flex-col justify-center`}>
+      <div className={` ${DarkMood ? 'bg-white': 'bg-gray-900 shadowinsety text-white'}  p-3 w-[86%] max-w-md md:max-w-2xl lg:max-w-4xl h-auto rounded-xl flex flex-col justify-center`}>
 
         <h1 className={` ${DarkMood ? '': 'text-white'} p-3 text-2xl font-primaryRegular pb-6 text-gray-500`}>Personal Info</h1>
-        <div className={`${Next ? 'hidden':  'block'} grid gap-2 md:gap-3 p-2 sm:grid-cols-1 md:grid-cols-2 ${DarkMood ? ' bg-white ':'bg-gray-900'}`}>
+        <div className={`${Next ? 'hidden':  'block'} grid gap-2 md:gap-3 p-2 sm:grid-cols-1 md:grid-cols-2 ${DarkMood ? ' bg-white ':''}`}>
         
           {RegistrationInfo.map((register)=>(
             <div className='w-full flex flex-col'>
@@ -54,7 +54,7 @@ const Register = ({DarkMood}) => {
           {RegistrationInfo2.map((register)=>(
             <div className='w-full flex flex-col'>
               <label className='text-gray-400 font-semibold p-2'>{register.title}</label>
-              <input className={` ${DarkMood ? 'bg-gray-100 ': 'bg-gray-800 '} p-1 md:p-2 outline-green-400 rounded`} placeholder='' />
+              <input className={` ${DarkMood ? 'bg-gray-100 ': 'bg-gray-800 text-white'} p-1 md:p-2 outline-green-400 rounded`} placeholder='' />
             </div>
             ))}
           </div>

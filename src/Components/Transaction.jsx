@@ -26,13 +26,13 @@ const Transaction = ({DarkMood}) => {
 
   return (
     <>
-     <div className={DarkMood ? '':'h-[100%] bg-gray-900'}>
+     <div className={`${DarkMood ? '':'h-[100vh] bg-gray-900 w-full'}  flex flex-col justify-center`}>
         <div className='p-8 flex justify-center'>
             <BackButton/>
             <h1 className={` ${DarkMood ? '': 'text-white'} text-2xl font-primaryBold`}>Transactions</h1>
         </div>
 
-        <div className='flex justify-between md:justify-center '>
+        <div className='flex justify-between w-[90%] m-2 '>
          <div>
           <button className={`${DarkMood ? 'bg-white':'border border-gray-700 bg-gray-900 text-gray-300 shadowD'}  flex outline-none p-2 shadow m-2 w-[6rem] justify-between rounded`}>
             Period
@@ -77,7 +77,7 @@ const Transaction = ({DarkMood}) => {
 
         </div>
 
-        <div className={`${DarkMood ? 'bg-white':'border border-gray-700 bg-gray-900 text-gray-300'} m-6 rounded-2xl p-2 `}>
+        <div className={`w-[80%] ${DarkMood ? 'bg-white':'border border-gray-700 bg-gray-900 text-gray-300'} m-6 rounded-2xl p-2 `}>
             <span className='flex justify-between p-2 font-primaryRegular text-gray-400 '>
               <h4>Date</h4>
               <h4>Total</h4>
